@@ -1,0 +1,49 @@
+# Gradle
+.gradle
+/build/
+/*/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Eclipse
+.classpath
+.settings/
+.project
+/bin/
+/*/bin
+
+# IntelliJ
+*.iml
+*.ipr
+*.iws
+*.uml
+**/.idea/*
+!/.idea/icon.png
+!/.idea/vcs.xml
+/out/
+/*/out/
+
+# Misc
+*.log
+*.graphml
+coverage.db*
+.metadata
+
+checksums*
+
+
+##########idea
+.idea/
+*.iml
+
+################maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
