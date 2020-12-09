@@ -1,4 +1,4 @@
-package org.example.designpattern.state;
+package org.example.designpattern.state.lift;
 
 /**
  *
