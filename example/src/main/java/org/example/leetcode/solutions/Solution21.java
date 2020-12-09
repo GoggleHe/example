@@ -15,24 +15,39 @@ package org.example.leetcode.solutions;
  *
  **/
 public class Solution21 {
+    public static void main(String[] args) {
+
+    }
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode first = new ListNode();
-
-        ListNode node1 = l1;
-        ListNode node2 = l2;
-
-        while (node1 != null) {
-            ListNode next1 = node1.next;
-            while (node2 != null) {
-                ListNode next2 = node2.next;
-                if (node1.val < node2.val) {
-
-                }
+        ListNode res = null;
+        ListNode node = null;
+        while(l1 != null && l2 != null){
+            ListNode temp = null;
+            if(l1.val <= l2.val){
+                node = new ListNode(l1.val);
+                l1 = l1.next;
+            }else{
+                node = new ListNode(l2.val);
+                l2 = l2.next;
             }
+            if(res == null && temp != null){
+                res = temp;
+                node = res;
+            } else {
+                node.next = temp;
+                node = node.next;
+            }
+
         }
-
-
-        return null;
+        while(l1 != null){
+            node = new ListNode(l1.val);
+            l1 = l1.next;
+        }
+        while(l2 != null){
+            node = new ListNode(l2.val);
+            l2 = l2.next;
+        }
+        return res;
     }
 }
 
