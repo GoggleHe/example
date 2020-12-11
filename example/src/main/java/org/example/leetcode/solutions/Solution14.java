@@ -27,15 +27,34 @@ package org.example.leetcode.solutions;
  **/
 public class Solution14 {
     public String longestCommonPrefix(String[] strs) {
-        if (strs == null || strs.length == 0) {
+        if(strs == null || strs.length == 0) {
             return "";
         }
-        String prefix = "";
-        boolean flag = true;
-        int index = 0;
-        while (flag) {
-
+        if(strs.length == 1) {
+            return strs[0];
         }
-        return null;
+        int prefixIndex = 0;
+        int length = strs.length;
+        int i = 1;
+        label:
+        for(;;){
+            while(i < length ){
+                if(prefixIndex < strs[i].length() && prefixIndex < strs[i - 1].length() && strs[i - 1].charAt(prefixIndex) == strs[i].charAt(prefixIndex)){
+                    i++;
+                }else{
+                    break label;
+                }
+            }
+            prefixIndex++;
+            i = 1;
+        }
+        return strs[0].substring(0,prefixIndex);
+    }
+
+    public static void main(String[] args) {
+        String substring = "".substring(0, 0);
+        System.out.println(substring);
+        boolean equals = substring.equals("");
+        System.out.println(equals);
     }
 }
