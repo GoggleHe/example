@@ -1,6 +1,6 @@
 package org.example.designpattern.proxy.jdkdynamic;
 
-public class Tank implements Movable, Fireable {
+public class Tank extends GameObject implements Movable, Fireable {
 
     @Override
     public void move() {
@@ -9,6 +9,6 @@ public class Tank implements Movable, Fireable {
 
     @Override
     public void fire() {
-        System.out.println("fire");
+        System.out.println("fire...");
     }
 }

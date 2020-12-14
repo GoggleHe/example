@@ -4,9 +4,9 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 public class LogProxyHandler implements InvocationHandler {
-    Tank tank;
+    GameObject tank;
 
-    public LogProxyHandler(Tank tank) {
+    public LogProxyHandler(GameObject tank) {
         this.tank = tank;
     }
 
