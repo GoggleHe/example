@@ -32,7 +32,7 @@
         <dubbo:parameter key="qos.port" value="@qos.port@"/>-->
     </dubbo:application>
 
-    <dubbo:registry protocol="multicast" address="224.8.8.8:1234"/>
+    <dubbo:registry protocol="multicast" address="224.8.8.8:1234?unicast=false"/>
 
     <dubbo:protocol accesslog="true" name="dubbo" port="3101"/>
     <dubbo:provider threads="200" timeout="8000" retries="0"/>

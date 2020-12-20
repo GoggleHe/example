@@ -1,6 +1,6 @@
 package org.example.dubbo.consumer.controller;
 
-import com.alibaba.dubbo.config.annotation.Reference;
+import org.apache.dubbo.config.annotation.Reference;
 import org.example.dubbo.common.service.HelloService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @Slf4j
 public class HelloController {
-    @Reference
+
+    @Reference(check = false)
     private HelloService helloService;
 
     @GetMapping("/sayHello")

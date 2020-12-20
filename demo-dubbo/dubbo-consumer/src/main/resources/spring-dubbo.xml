@@ -25,15 +25,11 @@
        http://code.alibabatech.com/schema/dubbo
        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="@dubbo.application.name@">
-        <!--从2.6.4/2.7.0开始，qosAcceptForeignIp默认配置改为false（拒绝远端主机发出的命令，只允许服务本机执行），如果qosAcceptForeignIp设置为true，有可能带来安全风险，请仔细评估后再打开。-->
-        <dubbo:parameter key="qos.enable" value="@qos.enable@"/>
-        <dubbo:parameter key="qos.accept.foreign.ip" value="@qos.accept.foreign.ip@"/>
-        <dubbo:parameter key="qos.port" value="@qos.port@"/>
+    <dubbo:application name="demo-dubbo-consumer">
     </dubbo:application>
 
-    <dubbo:registry protocol="@dubbo.protocol@" address="@dubbo.zookeeper.address@"/>
+    <dubbo:registry protocol="multicast" address="224.8.8.8:1234"/>
 
-    <dubbo:protocol accesslog="true" name="dubbo" port="@dubbo.port@"/>
+    <dubbo:protocol accesslog="true" name="dubbo" port="3203"/>
     <dubbo:provider threads="200" timeout="8000" retries="0"/>
 </beans>

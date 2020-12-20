@@ -3,8 +3,8 @@ server:
   servlet:
     context-path: /demo
 
-spring:
-  dubbo:
-    application:
-      name: spring-boot-demo-dubbo-consumer
-      registry: zookeeper://127.0.0.1:2181
+#spring:
+#  dubbo:
+#    application:
+#      name: spring-boot-demo-dubbo-consumer
+#      registry: zookeeper://127.0.0.1:2181
