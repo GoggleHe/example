@@ -32,8 +32,17 @@
         <dubbo:parameter key="qos.port" value="@qos.port@"/>-->
     </dubbo:application>
 
-    <dubbo:registry protocol="multicast" address="224.8.8.8:1234?unicast=false"/>
+    <!--<dubbo:registry protocol="multicast" address="224.8.8.8:1234?unicast=false"/>-->
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
 
-    <dubbo:protocol accesslog="true" name="dubbo" port="3101"/>
+    <dubbo:protocol accesslog="true" name="dubbo" port="20890"/>
     <dubbo:provider threads="200" timeout="8000" retries="0"/>
+    <bean id="callbackService" class="org.example.dubbo.provider.service.CallbackServiceImpl" />
+    <dubbo:service interface="org.example.dubbo.common.service.CallbackService" ref="callbackService" connections="1" callbacks="1000">
+        <dubbo:method name="addListener">
+            <dubbo:argument index="1" callback="true" />
+            <!--也可以通过指定类型的方式-->
+            <!--<dubbo:argument type="com.demo.CallbackListener" callback="true" />-->
+        </dubbo:method>
+    </dubbo:service>
 </beans>

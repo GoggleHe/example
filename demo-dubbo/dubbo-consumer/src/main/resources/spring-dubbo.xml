@@ -28,8 +28,10 @@
     <dubbo:application name="demo-dubbo-consumer">
     </dubbo:application>
 
-    <dubbo:registry protocol="multicast" address="224.8.8.8:1234"/>
+    <!--<dubbo:registry protocol="multicast" address="224.8.8.8:1234"/>-->
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"/>
 
     <dubbo:protocol accesslog="true" name="dubbo" port="3203"/>
-    <dubbo:provider threads="200" timeout="8000" retries="0"/>
+    <dubbo:consumer check="false" mock="false" />
+
 </beans>
