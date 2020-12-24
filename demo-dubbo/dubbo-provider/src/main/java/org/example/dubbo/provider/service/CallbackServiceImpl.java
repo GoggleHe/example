@@ -1,7 +1,5 @@
 package org.example.dubbo.provider.service;
 
-import org.apache.dubbo.config.annotation.Argument;
-import org.apache.dubbo.config.annotation.Service;
 import org.example.dubbo.common.service.CallbackListener;
 import org.example.dubbo.common.service.CallbackService;
 

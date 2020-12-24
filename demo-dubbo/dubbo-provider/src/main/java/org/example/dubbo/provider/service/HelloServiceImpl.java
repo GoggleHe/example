@@ -1,7 +1,8 @@
 package org.example.dubbo.provider.service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.DubboService;
+import org.apache.dubbo.config.annotation.Method;
 import org.example.dubbo.common.service.HelloService;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Component;
  * @author yangkai.shen
  * @date Created in 2018-12-25 16:58
  */
-@Service
+@DubboService
 @Component
 @Slf4j
 public class HelloServiceImpl implements HelloService {

@@ -1,7 +1,8 @@
 package org.example.dubbo.consumer.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.dubbo.config.annotation.Reference;
+import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.dubbo.config.annotation.Method;
 import org.example.dubbo.common.service.CallbackListener;
 import org.example.dubbo.common.service.CallbackService;
 import org.example.dubbo.common.service.HelloService;
@@ -21,9 +22,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class HelloController {
 
-    @Reference
+    @DubboReference(methods = {@Method(name = "sayHello", oninvoke = "notify.onInvoke", onreturn = "notify.onReturn", onthrow = "notify.onThrow")})
     private HelloService helloService;
-    @Reference
+    @DubboReference
     private CallbackService callbackService;
 
     @GetMapping("/sayHello")

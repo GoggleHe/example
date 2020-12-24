@@ -33,5 +33,8 @@
 
     <dubbo:protocol accesslog="true" name="dubbo" port="3203"/>
     <dubbo:consumer check="false" mock="false" />
+    <!--<dubbo:reference interface="org.example.dubbo.common.service.AsyncService">
+        <dubbo:method name="sayHello" sent="false" async="true" mock="true"/>
+    </dubbo:reference>-->
 
 </beans>
