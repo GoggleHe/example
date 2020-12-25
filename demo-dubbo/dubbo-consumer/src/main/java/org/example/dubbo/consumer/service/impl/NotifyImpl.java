@@ -2,13 +2,13 @@ package org.example.dubbo.consumer.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.dubbo.common.service.Notify;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 /**
  *
  **/
-@Component("notify")
 @Slf4j
+@Service("notifyImpl")
 public class NotifyImpl implements Notify {
     @Override
     public void onInvoke(String parameter) {

@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class HelloController {
 
-    @DubboReference(methods = {@Method(name = "sayHello", oninvoke = "notify.onInvoke", onreturn = "notify.onReturn", onthrow = "notify.onThrow")})
+    @DubboReference(stub = "org.example.dubbo.consumer.service.impl.HelloServiceStub")
     private HelloService helloService;
     @DubboReference
     private CallbackService callbackService;
