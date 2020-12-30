@@ -12,6 +12,7 @@
         <module>example</module>
         <module>springcloud</module>
         <module>demo-dubbo</module>
+        <module>network</module>
     </modules>
 
     <build>
