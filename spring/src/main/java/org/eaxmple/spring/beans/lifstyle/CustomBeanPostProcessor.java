@@ -1,4 +1,4 @@
-package org.eaxmple.spring.beans;
+package org.eaxmple.spring.beans.lifstyle;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;

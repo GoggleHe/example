@@ -1,6 +1,6 @@
 package org.eaxmple.spring;
 
-import org.eaxmple.spring.beans.SpringBoy;
+import org.eaxmple.spring.beans.lifstyle.SpringBoy;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
