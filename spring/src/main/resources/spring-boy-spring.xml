@@ -3,11 +3,11 @@
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="SpringBoy" class="org.eaxmple.spring.beans.lifstyle.SpringBoy" init-method="init" destroy-method="customDestroy" >
+	<bean id="SpringBoy" class="org.example.spring.beans.lifestyle.SpringBoy" init-method="init" destroy-method="customDestroy" >
 		<property name="name" value="hello"/>
 	</bean>
 
-	<bean class="org.eaxmple.spring.beans.lifstyle.CustomBeanPostProcessor" />
+	<bean class="org.example.spring.beans.lifestyle.CustomBeanPostProcessor" />
 
 
 </beans>

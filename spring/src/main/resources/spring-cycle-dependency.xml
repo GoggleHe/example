@@ -4,18 +4,18 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="springBeanB" class="org.eaxmple.spring.beans.cycledepency.SpringBeanB">
+    <bean id="springBeanB" class="org.example.spring.beans.cycledepency.SpringBeanB">
 <!--        <property name="springBeanA" ref="springBeanA"/>-->
         <constructor-arg name="springBeanA" ref="springBeanA" />
     </bean>
 
-    <bean id="springBeanA" class="org.eaxmple.spring.beans.cycledepency.SpringBeanA">
+    <bean id="springBeanA" class="org.example.spring.beans.cycledepency.SpringBeanA">
         <property name="springBeanB" ref="springBeanB" />
 <!--        <constructor-arg name="springBeanB" ref="springBeanB" />-->
     </bean>
 
 
 
-    <!--<context:component-scan base-package="org.eaxmple.spring.beans.cycledepency"/>-->
+    <!--<context:component-scan base-package="org.example.spring.beans.cycledepency"/>-->
 
 </beans>

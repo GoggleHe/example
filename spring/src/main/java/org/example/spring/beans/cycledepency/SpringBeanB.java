@@ -1,4 +1,4 @@
-package org.eaxmple.spring.beans.cycledepency;
+package org.example.spring.beans.cycledepency;
 
 /**
  *
