@@ -14,8 +14,8 @@ public class FibonacciForkJoinTask extends RecursiveTask<Integer> {
 
     @Override
     protected Integer compute() {
-        long id = Thread.currentThread().getId();
-        System.out.println("thread id : " + id);
+//        long id = Thread.currentThread().getId();
+//        System.out.println("thread id : " + id);
         if (num <= 0) {
             return 0;
         }
