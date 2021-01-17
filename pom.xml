@@ -14,7 +14,7 @@
         <module>demo-dubbo</module>
         <module>network</module>
         <module>spring</module>
-        <module>springboot-interagration</module>
+        <module>springboot-integration</module>
     </modules>
 
     <dependencyManagement>

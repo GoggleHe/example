@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot-interagration</artifactId>
+    <artifactId>springboot-integration</artifactId>
 
     <properties>
         <spring.boot.parent.version>2.1.1.RELEASE</spring.boot.parent.version>
