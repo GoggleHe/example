@@ -21,7 +21,10 @@ public class Main {
 
         TokenBucketLimiter limiter = new TokenBucketLimiter(10, 3000);
         while (true) {
+            long start = System.currentTimeMillis();
             limiter.acquire();
+            long end = System.currentTimeMillis();
+            System.out.println(end -start);
 
             Thread thread = new Thread(runnable);
             thread.start();
