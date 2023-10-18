@@ -30,4 +30,10 @@ public class MyController {
         }
         return integer;
     }
+
+    @GetMapping("updateMany")
+    @ResponseBody
+    public Integer updateMany(){
+        return myMapper.updateMulti(1, "啊", 2, "喔");
+    }
 }
