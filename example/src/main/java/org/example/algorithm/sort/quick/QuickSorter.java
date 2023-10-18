@@ -20,8 +20,9 @@ public class QuickSorter {
         int pivot = arr[rightBound];
         int left = leftBound;
         int right = rightBound - 1;
-        System.out.println("pivot = " + pivot);
+//        System.out.println("pivot = " + pivot);
         while (left <= right) {
+            //小于等于
             while (left <= right && arr[left] <= pivot) {
                 left++;
             }
@@ -30,8 +31,10 @@ public class QuickSorter {
             }
             if (left < right) {
                 swap(arr, left, right);
+                System.out.println("swap = " + left + " : " + right);
             }
         }
+        System.out.println("end = " + left + " : " + right);
         swap(arr, left, rightBound);
 
         partition(arr, leftBound, left - 1);
@@ -46,7 +49,7 @@ public class QuickSorter {
     }
 
     public static void main(String[] args) {
-        int[] arr = {5, 3, 1, 5, 6, 7, 32, 32, 21, 1, 3, 4, 5, 6, 2, 3, 4, 2, 52, 35, 23, 3, 3, 35, 3, 2, 35, 3, 3};
+        int[] arr = {5, 3, 10, 56, 6, 17, 3, 2, 9};
 
         QuickSorter sorter = new QuickSorter();
         sorter.sort(arr);
