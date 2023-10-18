@@ -15,6 +15,7 @@
         <module>network</module>
         <module>spring</module>
         <module>springboot-integration</module>
+        <module>unit-test</module>
     </modules>
 
     <dependencyManagement>
@@ -38,6 +39,13 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <!-- JUnit 5 requires Surefire version 2.22.0 or higher -->
+                <version>2.22.2</version>
+            </plugin>
+
         </plugins>
     </build>
 
