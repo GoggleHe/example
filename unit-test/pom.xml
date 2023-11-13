@@ -11,30 +11,6 @@
 
     <artifactId>unit-test</artifactId>
 
-    <!--<dependencies>
-        &lt;!&ndash;   JUnit5最小导包     &ndash;&gt;
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.7.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-engine</artifactId>
-            <version>1.10.0</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <version>3.6.0</version>
-            <scope>test</scope>
-        </dependency>
-
-    </dependencies>
--->
     <dependencyManagement>
         <dependencies>
             <dependency>
