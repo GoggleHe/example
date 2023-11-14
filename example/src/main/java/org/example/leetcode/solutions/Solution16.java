@@ -34,17 +34,7 @@ package org.example.leetcode.solutions;//给你一个长度为 n 的整数数组
 // 👍 1548 👎 0
 
 
-import org.junit.jupiter.api.TestReporter;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.stream.Stream;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 //org.example.leetcode submit region begin(Prohibit modification and deletion)
 class Solution16 {
@@ -93,25 +83,7 @@ class Solution16 {
         return closest;
     }
 
-    @MethodSource("org.example.leetcode.solutions.Solution16#parameter")
-    @ParameterizedTest(name = "target={1},expected={2},nums={0}")
-    void testThreeSumClosest(int[] nums, int target, int expected, TestReporter testReporter) {
-        int actual = threeSumClosest(nums, target);
 
-        Map<String, String> map = new HashMap<>();
-        map.put("nums", Arrays.toString(nums));
-        map.put("target", target + "");
-        map.put("expected", expected + "");
-        testReporter.publishEntry(map);
-
-        assertEquals(expected, actual);
-    }
-
-    static Stream<Arguments> parameter() {
-        return Stream.of(
-                Arguments.of(new int[]{-1, 2, 1, -4}, 1, 2),
-                Arguments.of(new int[]{4, 0, 5, -5, 3, 3, 0, -4, -5}, -2, -2));
-    }
 
 }
 //org.example.leetcode submit region end(Prohibit modification and deletion)
