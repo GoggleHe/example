@@ -32,12 +32,13 @@ public class SpringBoy implements BeanNameAware, BeanClassLoaderAware, ResourceL
 
     public void setName(String name) {
         System.out.println("setName");
-        this.name = "name";
+        this.name = name;
+        System.out.println("setName"+name);
     }
 
     @Override
     public void setBeanName(String name) {
-        System.out.println("BeanNameAware.setBeanName");
+        System.out.println("BeanNameAware.setBeanName：" + name);
         this.beanName = name;
     }
 

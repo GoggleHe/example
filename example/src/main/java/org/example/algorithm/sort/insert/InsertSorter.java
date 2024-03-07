@@ -8,6 +8,7 @@ import java.util.Arrays;
 public class InsertSorter {
 
     public void sort(int[] arr) {
+        //从下标1开始，将最小的树插入最左侧，原数据整体右移一位
         for (int i = 1; i < arr.length; i++) {
             int current = arr[i];
             int j = i;
