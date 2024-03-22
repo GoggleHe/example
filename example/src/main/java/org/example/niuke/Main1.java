@@ -3,7 +3,7 @@ package org.example.niuke;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class Main1 {
     static class Project {
         String name;
         int hot;
