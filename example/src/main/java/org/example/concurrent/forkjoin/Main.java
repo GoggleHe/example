@@ -11,8 +11,6 @@ public class Main {
         long start = System.currentTimeMillis();
         FibonacciForkJoinTask forkJoinTask = new FibonacciForkJoinTask(40);
 
-
-
         ForkJoinPool forkJoinPool = new ForkJoinPool(4);
         Integer invoke = forkJoinPool.invoke(forkJoinTask);
         System.out.println(invoke);
