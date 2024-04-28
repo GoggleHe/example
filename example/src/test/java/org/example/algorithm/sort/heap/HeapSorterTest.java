@@ -1,4 +1,4 @@
-package org.example.algorithm.sort.quick;
+package org.example.algorithm.sort.heap;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -8,20 +8,18 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-class QuickSorterTest {
+class HeapSorterTest {
 
     @ParameterizedTest
-    @MethodSource("org.example.algorithm.sort.quick.QuickSorterTest#parameterProvider")
-    void sort(int[] ints) {
-        QuickSorter quickSorter = new QuickSorter();
-        quickSorter.sort(ints);
-        System.out.println(Arrays.toString(ints));
+    @MethodSource("org.example.algorithm.sort.heap.HeapSorterTest#parameterProvider")
+    void sort(int[] arr) {
+        HeapSorter heapSorter = new HeapSorter();
+        heapSorter.sort(arr);
 
-        int[] sorted = Arrays.copyOf(ints, ints.length);
+        int[] sorted = Arrays.copyOf(arr, arr.length);
         Arrays.sort(sorted);
 
-        Assertions.assertArrayEquals(sorted, ints);
-
+        Assertions.assertArrayEquals(sorted, arr);
     }
 
     static Stream<Arguments> parameterProvider() {

@@ -61,15 +61,4 @@ public class HeapSorter {
         arr[i] = temp;
     }
 
-    public static void main(String[] args) {
-        // int[] arr = {9, 2, 3, 4, 5, 6};
-        int[] arr = {2,4,3,5,1};
-
-        HeapSorter sorter = new HeapSorter();
-        // sorter.sort(arr);
-        sorter.heapify(arr, 0, arr.length);
-
-        System.out.println(Arrays.toString(arr));
-    }
-
 }
