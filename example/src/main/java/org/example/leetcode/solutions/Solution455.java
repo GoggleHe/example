@@ -2,30 +2,25 @@ package org.example.leetcode.solutions;
 
 import java.util.Arrays;
 
-/**
- *
- **/
-public class Solution455 {
+class Solution455 {
+
     public int findContentChildren(int[] g, int[] s) {
         Arrays.sort(g);
         Arrays.sort(s);
-        int i = g.length - 1, j = s.length - 1, res = 0;
+
+        int cnt = 0;
+
+        int i = g.length - 1;
+        int j = s.length - 1;
+
         while (i >= 0 && j >= 0) {
-            if (s[j] >= g[i]) {
-                res++;
+            if (g[i] <= s[j]) {
+                cnt++;
                 j--;
             }
             i--;
         }
-        return res;
+        return cnt;
     }
 
-    public static void main(String[] args) {
-        int[] g = {1, 2};
-        int[] s = {1, 2, 3};
-
-        Solution455 solution455 = new Solution455();
-        int contentChildren = solution455.findContentChildren(g, s);
-        System.out.println(contentChildren);
-    }
 }
