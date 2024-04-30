@@ -1,6 +1,8 @@
 package org.example.algorithm.sort.heap;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
 
 /**
  *
@@ -59,6 +61,8 @@ public class HeapSorter {
         int temp = arr[largest];
         arr[largest] = arr[i];
         arr[i] = temp;
+
+        Collection<Object> values = new HashMap<>().values();
     }
 
 }
